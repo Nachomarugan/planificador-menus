@@ -15,7 +15,65 @@
     .hint{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:12px;line-height:1.5;margin:18px 2px}.hint-icon{color:var(--green);font-size:15px}.footer{border-top:1px solid var(--line);padding-top:15px;margin-top:18px;display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:11px}.dot{display:inline-block;width:7px;height:7px;background:#79a281;border-radius:50%;margin-right:6px}
     dialog{border:0;border-radius:20px;padding:0;width:min(420px,calc(100% - 32px));box-shadow:0 25px 80px #1114;color:var(--ink)}dialog::backdrop{background:#20251fcc;backdrop-filter:blur(3px)}.modal{padding:23px}.modal h2{font-family:Georgia,serif;font-size:24px;font-weight:500;margin:0 0 4px}.modal p{font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 16px}.modal label{display:block;font-size:11px;color:var(--muted);font-weight:700;margin:0 0 7px}.modal input{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;background:#faf9f5;outline:none}.modal input:focus{border-color:#829b87}.modal-actions{display:flex;gap:9px;margin-top:16px}.modal-actions button{border:0;border-radius:11px;padding:11px 14px;font-size:13px;font-weight:650}.save{background:var(--green);color:white}.cancel{background:#f1f0ea;color:var(--ink)}.modal-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.close{border:0;background:transparent;color:var(--muted);font-size:23px;padding:0 4px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;transition:.2s;background:#263c2f;color:#fff;padding:11px 16px;border-radius:12px;font-size:13px;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
     .main-tabs{display:flex;gap:7px;border-bottom:1px solid var(--line);margin:-9px 0 23px;padding-bottom:10px}.main-tab{border:0;border-radius:10px;background:transparent;color:var(--muted);padding:10px 14px;font-size:13px;font-weight:700}.main-tab[aria-selected="true"]{background:var(--mint);color:var(--green)}.view[hidden]{display:none}.section-head{margin-bottom:18px}.section-head h2{font-family:Georgia,serif;font-size:30px;font-weight:500;margin:0 0 4px}.section-head p{font-size:13px;color:var(--muted);margin:0;line-height:1.5}.list-add{display:flex;gap:8px;margin:16px 0 12px}.list-add input{flex:1;min-width:0;height:44px;border:1px solid var(--line);background:var(--card);border-radius:11px;padding:0 12px;font-size:13px;outline:none}.list-add input:focus{border-color:#9ab09e}.action-btn{border:0;border-radius:11px;background:var(--green);color:white;padding:0 16px;font-weight:700;font-size:13px}.shopping-list{display:grid;gap:8px}.shopping-item{display:flex;align-items:center;gap:11px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}.shopping-item input[type=checkbox]{accent-color:var(--green);width:17px;height:17px}.shopping-item span{flex:1;font-size:14px}.shopping-item.done span{text-decoration:line-through;color:#999}.remove-item{border:0;background:transparent;color:#9a9d95;font-size:19px;padding:0 4px}.empty-state{padding:20px;background:var(--card);border:1px dashed var(--line);border-radius:12px;color:var(--muted);font-size:13px;text-align:center}.recipes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.recipe{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:15px;display:flex;flex-direction:column;min-height:168px;cursor:pointer;transition:border-color .15s,transform .15s}.recipe:hover{border-color:#b7c9b9;transform:translateY(-2px)}.recipe:focus-visible{outline:2px solid #72947a;outline-offset:2px}.recipe-tag{font-size:9px;text-transform:uppercase;letter-spacing:.9px;color:var(--green);font-weight:750}.recipe h3{font-family:Georgia,serif;font-weight:500;font-size:19px;margin:8px 0}.recipe p{color:var(--muted);font-size:11px;line-height:1.45;margin:0 0 14px;flex:1}.recipe-detail{max-height:min(75vh,650px);overflow:auto}.recipe-detail h2{font-family:Georgia,serif;font-size:25px;font-weight:500;margin:0}.recipe-detail h3{font-size:12px;text-transform:uppercase;letter-spacing:.9px;color:var(--green);margin:20px 0 8px}.recipe-detail ul,.recipe-detail ol{padding-left:20px;margin:0;color:#484e46;font-size:13px;line-height:1.7}.recipe-meta{font-size:12px;color:var(--muted);margin-top:5px}
-    @media(max-width:720px){.shell{padding:19px 14px 32px}header{margin-bottom:26px}.intro{align-items:center}.week{grid-template-columns:1fr;gap:8px}.day{min-height:unset;padding:13px 14px}.day-head{margin-bottom:10px}.day-name{font-size:12px}.meals{display:block}.meal{margin-top:12px}.dish-input{height:44px}.divider{display:none}.day-head{margin-bottom:9px}.hint{margin-top:14px}.footer{flex-direction:column}.nav{gap:4px}.nav button{height:34px;min-width:34px}.nav .today{padding:0 9px}.share{padding:10px 12px}.main-tabs{margin:0 -2px 19px;gap:2px}.main-tab{flex:1;padding:10px 5px;font-size:12px}.recipes{grid-template-columns:1fr}.recipe{min-height:unset}.recipe-controls{flex-wrap:wrap}.section-head h2{font-size:27px}}
+    @media(max-width:720px){
+      body{min-width:320px}
+      .shell{width:100%;padding:max(14px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) calc(28px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))}
+      header{gap:8px;margin-bottom:20px}
+      .brand{gap:9px;min-width:0}
+      .logo{width:38px;height:38px;flex:0 0 38px;border-radius:13px}
+      .brand-name{font-size:16px}
+      .brand-sub{font-size:11px}
+      .share{min-height:44px;padding:0 11px;font-size:12px;white-space:nowrap}
+      .main-tabs{position:sticky;top:0;z-index:5;background:var(--paper);margin:0 0 20px;padding:6px 0 8px;gap:4px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none}
+      .main-tabs::-webkit-scrollbar{display:none}
+      .main-tab{flex:1 0 auto;min-height:44px;padding:10px 13px;font-size:13px;white-space:nowrap}
+      .intro{align-items:flex-end;gap:8px;margin-bottom:16px}
+      h1{font-size:32px;line-height:1.08;margin:6px 0 5px}
+      .range{font-size:12px;line-height:1.4}
+      .nav{flex:0 0 auto;gap:4px}
+      .nav button{width:44px;height:44px;min-width:44px}
+      .nav .today{padding:0 11px;font-size:12px}
+      .week{grid-template-columns:minmax(0,1fr);gap:10px}
+      .day{min-height:unset;padding:15px 14px;border-radius:16px}
+      .day-head{margin-bottom:11px}
+      .day-name{font-size:12px}
+      .day-date{min-width:32px;text-align:center}
+      .meals{display:block}
+      .meal{margin-top:13px}
+      .meal-label{font-size:11px;margin-bottom:7px}
+      .dish-input{height:48px;padding:11px 12px;font-size:16px;border-radius:11px}
+      .divider{display:none}
+      .hint{gap:9px;font-size:13px;line-height:1.5;margin:15px 2px}
+      .footer{flex-direction:column;gap:8px;padding-top:14px;margin-top:16px;font-size:12px;line-height:1.45}
+      .dot{width:8px;height:8px}
+      .section-head{margin-bottom:15px}
+      .section-head h2{font-size:27px}
+      .section-head p{font-size:14px}
+      .list-add{gap:8px;margin:15px 0 12px}
+      .list-add input{height:48px;min-width:0;font-size:16px}
+      .action-btn{min-height:48px;padding:0 14px;white-space:nowrap}
+      .shopping-list{gap:9px}
+      .shopping-item{min-height:52px;padding:9px 11px}
+      .shopping-item input[type=checkbox]{width:22px;height:22px;flex:0 0 22px}
+      .remove-item{width:44px;height:44px;flex:0 0 44px}
+      .recipes{grid-template-columns:minmax(0,1fr);gap:10px}
+      .recipe{min-height:unset;padding:15px 16px}
+      .recipe h3{font-size:20px}
+      dialog{width:100%;max-width:none;max-height:90dvh;margin:auto 0 0;border-radius:20px 20px 0 0;padding-bottom:env(safe-area-inset-bottom)}
+      .modal{padding:21px 18px}
+      .modal input{min-height:48px;font-size:16px}
+      .modal-actions button{min-height:48px;flex:1}
+      .recipe-detail{max-height:90dvh;overflow:auto;overscroll-behavior:contain}
+      .toast{left:14px;bottom:calc(14px + env(safe-area-inset-bottom));width:calc(100% - 28px);max-width:420px;transform:translateY(20px);text-align:center}
+      .toast.show{transform:translateY(0)}
+    }
+    @media(max-width:380px){
+      .shell{padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}
+      .brand-sub{font-size:10px}
+      .share{padding:0 9px;font-size:11px}
+      .intro{align-items:flex-start;flex-direction:column}
+      .nav{align-self:flex-end;margin-top:-2px}
+    }
   </style>
 </head>
 <body>
