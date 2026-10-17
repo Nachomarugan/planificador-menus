@@ -95,6 +95,9 @@
     .dish-input,.list-add input,.modal input,.auth-card input,.shopping-item span,.shopping-suggestion,.dish-suggestion,.ingredient-draft,.empty-state,.toast{font-size:var(--type-base)}.recipe-detail ul,.recipe-detail ol{font-size:var(--type-sm)}.remove-item{font-size:var(--type-lg)}
     .hint-icon{font-size:var(--type-sm)}.close,.ingredient-entry>button{font-size:var(--type-xl)}
     #dishDialog .modal-actions{flex-direction:column}#dishDialog .modal-actions button{width:100%;flex:0 0 auto}
+    .day.today-col .day-head{background:#234a38;color:#fff;border-radius:12px;padding:10px 12px;margin:-13px -11px 14px}.day.today-col .day-name{color:#fff}.day.today-col .day-date{background:#fff;color:#234a38}
+    .header-icon{width:44px;height:44px;flex:0 0 44px;padding:0;display:grid;place-items:center;border-radius:13px}.header-icon svg{width:20px;height:20px;display:block}
+    @media(max-width:720px){.day.today-col .day-head{margin:-15px -14px 13px}}
     @media(max-width:380px){h1,.auth-card h1{font-size:var(--type-page-mobile)}}
   </style>
 </head>
@@ -111,7 +114,7 @@
     <div id="plannerApp" hidden>
     <header>
       <div class="brand"><div class="logo" aria-hidden="true">⌂</div><div><div class="brand-name">La mesa</div></div></div>
-      <div class="account"><span class="account-email" id="accountEmail"></span><button class="share" id="share">Invitar a mi pareja ↗</button><button class="signout" id="signOut">Salir</button></div>
+      <div class="account"><span class="account-email" id="accountEmail"></span><button class="share header-icon" id="share" type="button" aria-label="Invitar a mi pareja" title="Invitar a mi pareja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.7 10.7 6.6-4.4M8.7 13.3l6.6 4.4"></path></svg></button><button class="signout header-icon" id="signOut" type="button" aria-label="Salir" title="Salir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17l5-5-5-5M15 12H3"></path><path d="M12 3h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-6"></path></svg></button></div>
     </header>
     <nav class="main-tabs" role="tablist" aria-label="Secciones de la aplicación">
       <button class="main-tab" role="tab" aria-selected="true" data-view="menus">Menús</button>
